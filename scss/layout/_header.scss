@@ -58,9 +58,6 @@
 }
 
 @include media ('<tablet') {
-    .header-body {
-     // height: 80px;
-    }
     .header-burger {
         display: block;
         position: relative;

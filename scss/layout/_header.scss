@@ -1,0 +1,142 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: #3a454d;
+    opacity: 0.85;
+    padding: 45px 0;
+
+    &::before {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    	background-color: #3a454d;
+    	opacity: 0.85;
+    }
+}
+    
+ .header-body {
+ 	position: relative;
+ 	z-index: 2;
+ 	display: flex;
+ 	justify-content: space-between;
+ 	// height: 150px;
+ 	align-items: center;
+ }
+
+.header-list {
+	display: flex;
+
+	li {
+	list-style: none;
+	}
+
+    .active a {
+    color: $light-blue;
+    border: 2px solid $light-blue;		
+    }
+
+	a {
+	opacity: 0.9;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-weight: bold;
+    // padding: 0 30px;
+    transition: color .3s linear, border-color .3s linear;
+    border: 2px solid transparent;
+    padding: 11px 20px;
+
+    &:hover {
+    color: $light-blue;
+    border-color: $light-blue; 
+    }
+	}
+}
+
+@include media ('<tablet') {
+    .header-body {
+     // height: 80px;
+    }
+    .header-burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 30;
+
+        &::before,
+        &::after {
+           content: '';
+           background-color: $light-blue;
+           position: absolute;
+           width: 100%;
+           height: 4px;
+           left: 0;
+           transition: all .3s linear;
+           border-radius: 2px;
+        }
+        
+        &:before {
+            top: 0;
+        }
+        
+        &::after {
+            bottom: 0;
+        }
+    }
+    
+    .header-burger span {
+        position: absolute;
+        background-color: $light-blue;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        top: 8px;
+        transition: all .3s linear;
+        border-radius: 2px;
+    }
+    
+    .header-burger.active span {
+        transform: scale(0);
+    }
+    
+    .header-burger.active::before {
+        transform: rotate(45deg);
+        top: 8px;
+    }
+    
+    .header-burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 8px;
+    }
+    
+    .header-menu {
+        position: absolute;
+        left: -15px;
+        height: 100vh;
+        background: linear-gradient(to bottom, #510077 0%,#6c2c89 20%,#6c2c89 20%,#3b005b 76%,#1c0128 100%);
+        padding: 70px 10px 10px 10px;
+        transition: all .3s linear;
+        overflow: auto;
+        top: 100%;
+        right: -15px;
+        opacity: 0;
+    }
+    
+    .header-menu.active {
+        opacity: 1;
+    }
+    
+    .header-list {
+        display: block;
+        
+        li {
+          margin: 0 0 20px 0;  
+        }
+     }    
+}
+  

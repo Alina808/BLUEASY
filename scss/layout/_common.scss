@@ -1,0 +1,184 @@
+// пример использования media (breakpoints в верху файла)
+body {
+	@include media ('>=tablet') {
+		background-color:$white;
+	}
+
+	@include media ('>=desktop') {
+		background-color: $white;
+	}
+}
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+
+.section-1 {
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	padding: 250px 0;
+	color: $white;
+    // margin: 0 0 70px 0;
+    // height: 100vh;
+    
+    &::before {
+      content: '';
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+    }
+
+    .text-block {
+	text-align: center;
+	max-width: 900px;
+	margin: 0 auto;
+	// min-height: 400px;
+}
+}
+
+.section-1 .container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 5;
+
+	&::before {
+	content: '';
+	min-height: 300px;
+	width: 0;
+	}
+}
+
+
+
+h1 {
+    position: relative;
+	color: white;
+	background-color: black;
+	opacity: 0.85;
+}
+
+
+.section-2 {
+	padding: 80px 0;
+	background-color: $light-blue;
+	color: $white;
+
+	h3 {
+		position: relative;
+		margin-bottom: 39px;
+		text-align: center;
+
+		&::before {
+		content: '';
+		width: 45px;
+		height: 2px;
+		position: absolute;
+		bottom: 0;
+        background-color: $white;
+ }
+        @include media ('>=tablet') {
+		text-align: left;
+
+		&::before {
+		content: '';
+		width: 45px;
+		height: 2px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+        }
+		}
+}
+	.row {
+	@include media ('>=tablet') {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -40px 0 0;
+	}
+}
+	
+	.col {
+		text-align: center;
+		@include media ('>=tablet') {
+		width: 50%;
+	    padding: 0 40px 0 0;	
+		}
+	    
+	    @include media ('>=desktop') {
+	    width: 25%;
+	    }
+
+		img {
+		margin-bottom: 24px;
+		}
+	}		
+}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Обертка для полей формы
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+// Поля формы
+
+.form-control {
+	display: block;
+	width: 100%;
+	padding: 10px 15px;
+}
+
+.form-control {
+	@include placeholder {
+		color: $red;
+	}
+
+	&:focus {
+		border-color: $yellow;
+	}
+}
+
+.grid {
+	img {
+		display: block;
+		width: 100%;
+	}
+}

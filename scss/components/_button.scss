@@ -1,5 +1,24 @@
 // Общие стили для кнопок 
 
+.btn-outline {
+		text-decoration: none;
+		color: #353f46;
+		border: 2px solid #353f46;
+		padding: 15px 40px;
+		text-transform: uppercase;
+		transition: color .3s linear, border-color .3s linear;
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: 20px;
+		font-weight: bold;
+
+		&:hover {
+			color: #1f2529;
+			border-color: #1f2529;
+			text-decoration: none;
+		}
+	}
+
 .btn {
 	transition: color .15s ease-in-out, border-color .15s ease-in-out, background-color .15s ease-in-out;
 	display: inline-block;
@@ -36,7 +55,7 @@
 		}
 	}
 
-	// Стили для кнопок с обводкой вариант один 
+	// Стили для кнопок с обводкой вариант один
 
 	&.btn-outline-primary {
 		background-color: transparent;

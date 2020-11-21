@@ -23,14 +23,18 @@
 	transition: color .15s ease-in-out, border-color .15s ease-in-out, background-color .15s ease-in-out;
 	display: inline-block;
 	vertical-align: middle;
-	padding: 10px 20px;
+	padding: 25px 150px;
 	border-radius: 3px;
 	text-align: center;
 	border: none;
+	color: $white;
+	background-color: #4bcaff;
+	text-transform: uppercase;
 
 	&:hover {
-		text-decoration: none;
-		outline: none;
+		background-color: #24beff;
+		// text-decoration: none;
+		// outline: none;
 	}
 
 	// Стили для кнопок без обводки вариант один 

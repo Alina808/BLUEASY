@@ -690,14 +690,16 @@ a:hover {
   transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   display: inline-block;
   vertical-align: middle;
-  padding: 10px 20px;
+  padding: 25px 150px;
   border-radius: 3px;
   text-align: center;
   border: none;
+  color: #fff;
+  background-color: #4bcaff;
+  text-transform: uppercase;
 }
 .btn:hover {
-  text-decoration: none;
-  outline: none;
+  background-color: #24beff;
 }
 .btn.btn-primary {
   background-color: #007bff;
@@ -1064,6 +1066,8 @@ h1 {
 .twitter .twit {
   font-size: 30px;
   font-family: FontAwesome;
+  line-height: 0.8;
+  padding: 15px 0 0 0;
 }
 .twitter .twit:hover {
   text-decoration: none;
@@ -1106,7 +1110,6 @@ h1 {
   display: flex;
   padding: 0;
   margin: 0;
-  text-align: center;
 }
 .social-networks a {
   color: #fff;
@@ -1145,14 +1148,46 @@ h1 {
   color: #4bcaff;
 }
 
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 39px;
+}
+
+.quotes {
+  font-family: Bitter;
+  font-size: 72px;
+  font-weight: bold;
+  line-height: 0.69;
+}
+
+.contact {
+  color: #fff;
+  padding: 80px 0;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  object-fit: contain;
+}
+
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 40px;
+}
+
+textarea {
+  resize: none;
+  height: 220px;
 }
 
 .form-control {
   display: block;
   width: 100%;
-  padding: 10px 15px;
+  padding: 15px 20px;
+  background: transparent;
+  border: solid 2px #fff;
+  transition: border-color 0.3s linear;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -1172,7 +1207,7 @@ h1 {
   color: #f00;
 }
 .form-control:focus {
-  border-color: #ff0;
+  border-color: #72d6ff;
 }
 
 .grid img {

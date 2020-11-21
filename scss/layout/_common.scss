@@ -360,9 +360,9 @@ h1 {
 	margin-bottom: 0;
 }
 
-.twit {
-	font-size: 30px;
-  	font-family: FontAwesome;
+	.twit {
+		font-size: 30px;
+  		font-family: FontAwesome;
 
   	  	&:hover {
   		text-decoration: none;
@@ -381,7 +381,7 @@ h1 {
 
 
 
-.section-6 {
+.information {
 	padding: 100px 0 173px 0;
 	color: $white;
 	position: relative;
@@ -390,20 +390,10 @@ h1 {
 	background-position: 50% 50%;
 	object-fit: contain;
 
-	h3 {
-		position: relative;
-		margin-bottom: 39px;
-
-		&:after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 45px;
-			height: 2px;
-			background-color: $white;
-		}
+	p {
+		padding-bottom: 15px;
 	}
+
 	.row {
 		@include media ('>=tablet') {
 			display: flex;
@@ -411,72 +401,62 @@ h1 {
 	}
 
 	.col {
-		// text-align: center;
-
 		@include media ('>=tablet') {
 			 width: 50%;
 		}
 	}
 }
-	.footer-content {
-		margin: 0 -20px;
-		// padding: 30px 0 0 0;
-
-	.social-networks {
+}
+.social-networks {
+		cursor: pointer;
+		list-style: none;
 		display: flex;
-		// justify-contetn: center;
+		padding: 0;
+		margin: 0;
+		text-align: center;
 
 		a {
 			color: $white;
 			border: 2px solid $white;
 			padding: 15px 18px 14px;
 			font-size: 30px;
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			transform: color .3s linear, border-color .3s linear;
 			text-decoration: none;
+
+			&:hover {
+				color: #ade7ff;
+				border-color: #ade7ff;
+			}
 		}
 
 		li {
 			margin: 0 20px 0 0;
 		}
 	}
-}
-}
 
-.section-7 {
+
+.testimonials {
 	color: #515f67;
 	padding: 80px 0;
-	
-	h3 {
-		position: relative;
-		margin-bottom: 39px;
 
+	.title {
+		margin-bottom: 0;
 		&:after {
-			content: '';
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 45px;
-			height: 2px;
 			background-color: #515f67;
 		}
-
-		&:before {
-			content: '”';
-			position: absolute;
-			top: -24px;
-			right: 0;
-			font-size: 72px;
-			font-weight: bold;
-		}
 	}
-
 	p {
 		font-size: 28px;
 	}
+
 	a {
 		color: #4bcaff;
 	}
 }
-
 
 
 

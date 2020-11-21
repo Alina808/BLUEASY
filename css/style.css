@@ -460,6 +460,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -1072,7 +1076,7 @@ h1 {
   padding-bottom: 39px;
 }
 
-.section-6 {
+.information {
   padding: 100px 0 173px 0;
   color: #fff;
   position: relative;
@@ -1081,76 +1085,63 @@ h1 {
   background-position: 50% 50%;
   object-fit: contain;
 }
-.section-6 h3 {
-  position: relative;
-  margin-bottom: 39px;
-}
-.section-6 h3:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 45px;
-  height: 2px;
-  background-color: #fff;
+.information p {
+  padding-bottom: 15px;
 }
 @media (min-width: 768px) {
-  .section-6 .row {
+  .information .row {
     display: flex;
     flex-wrap: wrap;
   }
 }
 @media (min-width: 768px) {
-  .section-6 .row .col {
+  .information .row .col {
     width: 50%;
   }
 }
-.section-6 .footer-content {
-  margin: 0 -20px;
-}
-.section-6 .footer-content .social-networks {
+
+.social-networks {
+  cursor: pointer;
+  list-style: none;
   display: flex;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
-.section-6 .footer-content .social-networks a {
+.social-networks a {
   color: #fff;
   border: 2px solid #fff;
   padding: 15px 18px 14px;
   font-size: 30px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: color 0.3s linear, border-color 0.3s linear;
   text-decoration: none;
 }
-.section-6 .footer-content .social-networks li {
+.social-networks a:hover {
+  color: #ade7ff;
+  border-color: #ade7ff;
+}
+.social-networks li {
   margin: 0 20px 0 0;
 }
 
-.section-7 {
+.testimonials {
   color: #515f67;
   padding: 80px 0;
 }
-.section-7 h3 {
-  position: relative;
-  margin-bottom: 39px;
+.testimonials .title {
+  margin-bottom: 0;
 }
-.section-7 h3:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 45px;
-  height: 2px;
+.testimonials .title:after {
   background-color: #515f67;
 }
-.section-7 h3:before {
-  content: "”";
-  position: absolute;
-  top: -24px;
-  right: 0;
-  font-size: 72px;
-  font-weight: bold;
-}
-.section-7 p {
+.testimonials p {
   font-size: 28px;
 }
-.section-7 a {
+.testimonials a {
   color: #4bcaff;
 }
 

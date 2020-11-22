@@ -1,17 +1,8 @@
-// пример использования media (breakpoints в верху файла)
-body {
-	@include media ('>=tablet') {
-		background-color:$white;
-	}
-
-	@include media ('>=desktop') {
-		background-color: $white;
-	}
-}
-
 .title {
 		position: relative;
 		margin-bottom: 39px;
+		line-height: 0.8;
+		padding-bottom: 10px;
 
 		&::after {
 		content: '';
@@ -41,51 +32,42 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	padding: 250px 0;
 	color: $white;
 	filter: grayscale(100%);
 	object-fit: contain;
-    // margin: 0 0 70px 0;
-    // height: 100vh;
-    
-    &::before {
-      content: '';
-	  position: absolute;
-	  top: 0;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
-    }
 
-    .text-block {
-	text-align: center;
-	max-width: 900px;
-	margin: 0 auto;
-	// min-height: 400px;
-}
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+
+				&::before {
+					content: '';
+					min-height: 300px;
+					width: 0;
+				}
+			}
 }
 
-.section-1 .container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	z-index: 5;
+.text-block {
+	padding-top: 400px;
+	padding-bottom: 276px;
 
-	&::before {
-	content: '';
-	min-height: 300px;
-	width: 0;
-	}
+		h1 {
+			text-transform: uppercase;
+			margin-bottom: 1px;
+			text-align: center;
+			line-height: 1.79;
+		}
+
+		h1 span {
+			box-decoration-break: clone;
+			background: rgba(0,0,0, 0.5);
+  			color: white; 
+			padding: 10px;
+		}
 }
-
-h1 {
-    position: relative;
-	color: white;
-	background-color: black;
-	opacity: 0.85;
-}
-
 
 .services {
 	padding: 80px 0;
@@ -289,11 +271,6 @@ h1 {
      }    
 }
 
-
-
-
-
-
 .video-section {
 	background-color: rgba(81, 95, 103, 10);
 	color: $white;
@@ -344,6 +321,7 @@ h1 {
 
 	p {
 		font-size: 28px;
+		line-height: 1.79;
 	}
 
 	a {
@@ -453,6 +431,7 @@ h1 {
 	}
 	p {
 		font-size: 28px;
+		line-height: 1.79;
 	}
 
 	a {
@@ -514,17 +493,17 @@ textarea {
 	 	flex-wrap: wrap;
 	 }
 
-.order-1 {
-	order: 1;
-	width: 50%;
- }
+	.order-1 {
+		order: 1;
+		width: 50%;
+ 	}
 
 	.order-2 {
  		order: 3;
 		width: 100%;
 	}
 
-.order-3 {
+	.order-3 {
 		order: 2;
 		width: 50%;
 

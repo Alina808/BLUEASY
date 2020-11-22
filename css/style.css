@@ -428,23 +428,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 42px;
 }
 
 h2 {
-  font-size: 27px;
-}
-
-h3 {
   font-size: 30px;
   font-weight: 300;
   text-transform: uppercase;
 }
 
-h4 {
+h3 {
   font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 21px;
 }
 
 h5 {
@@ -742,20 +743,11 @@ a:hover {
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  body {
-    background-color: #fff;
-  }
-}
-@media (min-width: 1024px) {
-  body {
-    background-color: #fff;
-  }
-}
-
 .title {
   position: relative;
   margin-bottom: 39px;
+  line-height: 0.8;
+  padding-bottom: 10px;
 }
 .title::after {
   content: "";
@@ -783,31 +775,15 @@ a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  padding: 250px 0;
   color: #fff;
   filter: grayscale(100%);
   object-fit: contain;
 }
-.section-1::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.section-1 .text-block {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 .section-1 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 5;
 }
 .section-1 .container::before {
   content: "";
@@ -815,11 +791,22 @@ a:hover {
   width: 0;
 }
 
-h1 {
-  position: relative;
+.text-block {
+  padding-top: 400px;
+  padding-bottom: 276px;
+}
+.text-block h1 {
+  text-transform: uppercase;
+  margin-bottom: 1px;
+  text-align: center;
+  line-height: 1.79;
+}
+.text-block h1 span {
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  background: rgba(0, 0, 0, 0.5);
   color: white;
-  background-color: black;
-  opacity: 0.85;
+  padding: 10px;
 }
 
 .services {
@@ -1053,6 +1040,7 @@ h1 {
 }
 .twitter p {
   font-size: 28px;
+  line-height: 1.79;
 }
 .twitter a {
   text-decoration: none;
@@ -1145,6 +1133,7 @@ h1 {
 }
 .testimonials p {
   font-size: 28px;
+  line-height: 1.79;
 }
 .testimonials a {
   color: #4bcaff;
@@ -1234,7 +1223,7 @@ textarea {
   z-index: 50;
   background-color: #3a454d;
   opacity: 0.85;
-  padding: 45px 0;
+  padding: 64px 0;
 }
 .header::before {
   position: absolute;

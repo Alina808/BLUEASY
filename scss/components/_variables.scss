@@ -12,7 +12,7 @@ $black: #000;
 $white: #fff;
 $light-blue: #4bcaff;
 
-$base-font-sans-serif: 'Rubik', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-sans-serif: 'SegoeUI', 'Rubik', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Основной размер и цвет текста, семейство шрифта и цвет фона
@@ -21,6 +21,7 @@ $base-background-color: $white !default;
 $font-size-base: 14px;
 $line-height-base: 1.7;
 $base-font-family: $base-font-sans-serif !default;
+$font-weight: 300;
 
 $base-min-width: 320px;
 

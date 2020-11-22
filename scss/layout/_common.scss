@@ -501,17 +501,51 @@ textarea {
 	background: transparent;
 	border: solid 2px $white;
 	transition: border-color .3s linear;
-}
-
-.form-control {
-	@include placeholder {
-		color: $red;
-	}
 
 	&:focus {
+		outline: none;
 		border-color: #72d6ff;
 	}
 }
+
+ @include media ('>=tablet') {
+	 form {
+		display: flex;
+	 	flex-wrap: wrap;
+	 }
+
+.order-1 {
+	order: 1;
+	width: 50%;
+ }
+
+	.order-2 {
+ 		order: 3;
+		width: 100%;
+	}
+
+.order-3 {
+		order: 2;
+		width: 50%;
+
+		p {
+			padding: 0 0 0 130px;
+			font-weight: 600;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .grid {
 	img {

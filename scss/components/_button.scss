@@ -6,15 +6,16 @@
 		border: 2px solid #353f46;
 		padding: 15px 40px;
 		text-transform: uppercase;
-		transition: color .3s linear, border-color .3s linear;
+		transition: color .1s linear, border-color .2s linear;
 		display: inline-block;
 		vertical-align: middle;
 		margin-top: 20px;
 		font-weight: bold;
 
 		&:hover {
-			color: #1f2529;
-			border-color: #1f2529;
+			color: $white;
+			border-color: $light-blue;
+			background-color: $light-blue;
 			text-decoration: none;
 		}
 	}

@@ -674,15 +674,16 @@ a:hover {
   border: 2px solid #353f46;
   padding: 15px 40px;
   text-transform: uppercase;
-  transition: color 0.3s linear, border-color 0.3s linear;
+  transition: color 0.1s linear, border-color 0.2s linear;
   display: inline-block;
   vertical-align: middle;
   margin-top: 20px;
   font-weight: bold;
 }
 .btn-outline:hover {
-  color: #1f2529;
-  border-color: #1f2529;
+  color: #fff;
+  border-color: #4bcaff;
+  background-color: #4bcaff;
   text-decoration: none;
 }
 
@@ -898,7 +899,7 @@ a:hover {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 .intro {
@@ -906,7 +907,6 @@ a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  filter: grayscale(100%);
   object-fit: contain;
 }
 
@@ -952,10 +952,13 @@ a:hover {
     margin: 0 -40px 0 0;
   }
 }
+.services .col {
+  padding: 0 0 20px 0;
+}
 @media (min-width: 768px) {
   .services .col {
     width: 50%;
-    padding: 0 40px 0 0;
+    padding: 0 40px 20px 0;
   }
 }
 @media (min-width: 1024px) {
@@ -1049,32 +1052,28 @@ a:hover {
   background-color: #515f67;
   position: relative;
 }
-
 @media (min-width: 768px) {
-  .row {
+  .video-section .row {
     display: flex;
     margin: 0 -40px 0 0;
   }
 }
-
 @media (min-width: 768px) {
-  .col {
+  .video-section .col {
     width: 50%;
     padding: 0 40px 0 0;
   }
 }
-
-.responsive-embed {
+.video-section .responsive-embed {
   position: relative;
   margin-top: 30px;
 }
-.responsive-embed::before {
+.video-section .responsive-embed::before {
   content: "";
   display: block;
   padding-top: 56.25%;
 }
-
-.embed-item {
+.video-section .embed-item {
   position: absolute;
   top: 0;
   left: 0;
@@ -1130,11 +1129,13 @@ a:hover {
   .information .row {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 0 0 -30px;
   }
 }
 @media (min-width: 768px) {
   .information .row .col {
     width: 50%;
+    padding: 0 0 0 30px;
   }
 }
 
@@ -1188,7 +1189,7 @@ a:hover {
 
 .quotes {
   line-height: 0.69;
-  font-size: 38px;
+  font-size: 35px;
   font-family: Bitter;
   font-weight: bold;
 }
@@ -1203,6 +1204,16 @@ a:hover {
 .contact address, .contact p {
   font-weight: 600;
   font-style: normal;
+}
+@media (min-width: 768px) {
+  .contact address, .contact p {
+    padding: 0 0 0 65px;
+  }
+}
+@media (min-width: 1024px) {
+  .contact address, .contact p {
+    padding: 0 0 0 130px;
+  }
 }
 
 .form-group {
@@ -1248,15 +1259,7 @@ textarea {
     order: 2;
     width: 50%;
   }
-  .order-3 address, .order-3 p {
-    padding: 0 0 0 130px;
-  }
 }
-.grid img {
-  display: block;
-  width: 100%;
-}
-
 .header {
   position: absolute;
   margin: 0;
@@ -1436,25 +1439,33 @@ textarea {
 .footer {
   background-color: #2f383c;
   color: #515f67;
-  padding: 78px 0;
+  padding: 38px 0;
 }
-.footer p {
-  margin: 0;
+@media (min-width: 768px) {
+  .footer {
+    padding: 78px 0;
+  }
 }
 
 .footer-nav {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 .footer-list {
   display: flex;
-  padding: 0;
+  padding: 0 0 10px 0;
   margin: 0;
   text-transform: uppercase;
-}
-.footer-list li {
   list-style: none;
 }
 .footer-list li:after {

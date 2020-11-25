@@ -17,6 +17,22 @@
  }
 }
 
+.color {
+	color: $white;
+}
+
+.color-2 {
+	color: #515f67;
+}
+
+.bg {
+	background-color: $light-blue;
+}
+
+.padding {
+	padding: 80px 0;
+}
+
 .wrapper {
 	overflow: hidden;
 	position: relative;
@@ -34,56 +50,47 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	color: $white;
+	// color: $white;
 	filter: grayscale(100%);
 	object-fit: contain;
 
-		.container {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			position: relative;
-
-				&::before {
-					content: '';
-					min-height: 300px;
-					width: 0;
-				}
-			}
+		
 }
 
 .text-block {
 	padding-top: 200px;
 	padding-bottom: 130px;
 
-	@include media ('>=tablet') {
-		
-	}
 	@include media ('>=desktop') {
 		padding-top: 400px;
 		padding-bottom: 260px;
 	}
 	
 		h1 {
-			font: 42px/2 SegoeUI, sans-serif;
+			font: 30px/1.8 SegoeUI, sans-serif;
   			text-transform: uppercase;
   			margin-bottom: 1rem;
 			text-align: center;
 			font-weight: 300px;
+
+			@include media ('>=tablet') {
+				font: 42px/2 SegoeUI, sans-serif;
 		}
+	}
 
 		h1 span {
 			box-decoration-break: clone;
 			background: rgba(0,0,0, 0.5);
   			color: white; 
-			padding: 10px;
-}
+			padding: 5px;
+
+			@include media ('>=tablet') {
+				padding: 10px;
+	}
+		}
 }
 
 .services {
-	padding: 80px 0;
-	background-color: $light-blue;
-	color: $white;
  
 	.row {
 	@include media ('>=tablet') {
@@ -118,8 +125,6 @@
 
 
 .portfolio {
-	padding: 80px 0;
-	color: rgba(81, 95, 103, 0.9);
 
 	.title {
 		margin-bottom: 0;
@@ -177,6 +182,7 @@
 				opacity: 1;
 			}
 		}
+
 		.plus {
 		&:before,
 		&:after {
@@ -201,91 +207,89 @@
 	}	
 }	
 
-.block {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 80px;
-}
+// .block {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	align-items: center;
+// 	margin-bottom: 80px;
+// }
 
-.list {
-	display: flex;
-	padding: 0;
-	margin: 0 0 0 -20px;
-	text-transform: uppercase;
+// .list {
+// 	display: flex;
+// 	padding: 0;
+// 	margin: 0 0 0 -20px;
+// 	text-transform: uppercase;
 
-	li {
-		list-style: none;
-		margin: 0 0 0 20px
-	}
+// 	li {
+// 		list-style: none;
+// 		margin: 0 0 0 20px
+// 	}
 
-	.active a {
-		color: $light-blue;
-		border: 2px solid $light-blue;
-	}
+// 	.active a {
+// 		color: $light-blue;
+// 		border: 2px solid $light-blue;
+// 	}
 
-	a {
-		color: rgba(81, 95, 103, 0.9);
-		text-decoration: none;
-		opacity: 0.9;
-		transition: color .3s linear, border-color .3s linear;
-		border: 2px solid transparent;
-		padding: 10px 18px;
+// 	a {
+// 		color: rgba(81, 95, 103, 0.9);
+// 		text-decoration: none;
+// 		opacity: 0.9;
+// 		transition: color .3s linear, border-color .3s linear;
+// 		border: 2px solid transparent;
+// 		padding: 10px 18px;
 
-		&:hover {
-			color: $light-blue;
-			border-color: $light-blue;
-		}
-	}
-} 
+// 		&:hover {
+// 			color: $light-blue;
+// 			border-color: $light-blue;
+// 		}
+// 	}
+// } 
 
-@include media ('<tablet') {
-	.burger {
-		display: block;
-		position: relative;
-		width: 30px;
-		height: 20px;
+// @include media ('<tablet') {
+// 	.burger {
+// 		display: block;
+// 		position: relative;
+// 		width: 30px;
+// 		height: 20px;
 
-		&:before,
-		&:after {
-			content: '❆';
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-	}
+// 		&:before,
+// 		&:after {
+// 			content: '❆';
+// 			position: absolute;
+// 			top: 0;
+// 			left: 0;
+// 		}
+// 	}
 
-	.menu {
-        position: absolute;
-        left: -15px;
-        height: 100vh;
-        background: linear-gradient(to bottom, #510077 0%,#6c2c89 20%,#6c2c89 20%,#3b005b 76%,#1c0128 100%);
-        padding: 30px 10px 10px 10px;
-        transition: all .3s linear;
-        overflow: auto;
-        top: 100%;
-        right: -15px;
-        opacity: 0;
-    }
-    .menu.active {
-        opacity: 1;
-    }
+// 	.menu {
+//         position: absolute;
+//         left: -15px;
+//         height: 100vh;
+//         background: linear-gradient(to bottom, #510077 0%,#6c2c89 20%,#6c2c89 20%,#3b005b 76%,#1c0128 100%);
+//         padding: 30px 10px 10px 10px;
+//         transition: all .3s linear;
+//         overflow: auto;
+//         top: 100%;
+//         right: -15px;
+//         opacity: 0;
+//     }
+//     .menu.active {
+//         opacity: 1;
+//     }
     
-    .list {
-        display: block;
-        padding: 0;
-        margin: 0;
+//     .list {
+//         display: block;
+//         padding: 0;
+//         margin: 0;
         
-        li {
-          margin: 0 0 20px 0;  
-        }
-     }    
-}
+//         li {
+//           margin: 0 0 20px 0;  
+//         }
+//      }    
+// }
 
 .video-section {
 	background-color: rgba(81, 95, 103, 10);
-	color: $white;
-	padding: 80px 0;
 	position: relative;
 }
 
@@ -326,9 +330,6 @@
 
 
 .twitter {
-	background-color: $light-blue;
-	color: $white;
-	padding: 80px 0;
 
 	p {
 		font-size: 28px;
@@ -373,7 +374,6 @@
 
 .information {
 	padding: 100px 0 173px 0;
-	color: $white;
 	position: relative;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -429,9 +429,7 @@
 
 
 .testimonials {
-	color: #515f67;
-	padding: 80px 0;
-
+	
 	.title {
 		margin-bottom: 0;
 
@@ -439,6 +437,7 @@
 			background-color: #515f67;
 		}
 	}
+	
 	p {
 		font-size: 28px;
 		line-height: 1.79;
@@ -446,32 +445,34 @@
 
 	a {
 		color: #4bcaff;
+		font-weight: bold;
 	}
 }
 	
 .box {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	padding-bottom: 39px;
-
 }
 	.quotes {
+		line-height: 0.69;
+		font-size: 38px;
 		font-family: Bitter;
-		font-size: 72px;
 		font-weight: bold;
-		line-height: 0.69;	
 	}
 
 
 .contact {
-	color: $white;
-	padding: 80px 0;
 	position: relative;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	object-fit: contain;
+
+	address, p {
+			font-weight: 600;
+			font-style: normal;
+		}
 }
 
 .form-group {
@@ -497,6 +498,7 @@ textarea {
 		border-color: #72d6ff;
 	}
 }
+
 	  
  @include media ('>=tablet') {
  	form {
@@ -520,8 +522,6 @@ textarea {
 
 		address, p {
 			padding: 0 0 0 130px;
-			font-weight: 600;
-			font-style: normal;
 		}
 	}
 }

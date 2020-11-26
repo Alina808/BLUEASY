@@ -1168,7 +1168,12 @@ a:hover {
   border-color: #ade7ff;
 }
 .social-networks li {
-  margin: 0 20px 0 0;
+  margin: 0 15px 0 0;
+}
+@media (min-width: 768px) {
+  .social-networks li {
+    margin: 0 20px 0 0;
+  }
 }
 
 .testimonials .title {
@@ -1322,6 +1327,7 @@ textarea {
 .header-list a {
   opacity: 0.9;
   font-size: 14px;
+  cursor: pointer;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
@@ -1360,6 +1366,7 @@ textarea {
     width: 30px;
     height: 20px;
     z-index: 3;
+    cursor: pointer;
   }
 
   .header-burger span {

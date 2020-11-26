@@ -30,7 +30,6 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	// padding: 65px 0;
 
 	@include media ('>=tablet') {
 		padding: 45px 0;
@@ -161,6 +160,7 @@
 		background: #005172;
 		padding: 30px 10px 10px 10px;
 		transition: all .3s linear;
+		// transition: opacity .3s linear, visibility .3s linear, transform .3s linear;
 		overflow: auto;
 		top: 100%;
 		right: -20px;

@@ -25,8 +25,16 @@
 	color: #515f67;
 }
 
-.bg {
+.bg-color {
 	background-color: $light-blue;
+}
+
+.bg {
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	object-fit: contain;
 }
 
 .padding {
@@ -45,13 +53,7 @@
 }
 
 .intro {
-	position: relative;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	object-fit: contain;	
-}
-
+		
 .text-block {
 	padding-top: 200px;
 	padding-bottom: 130px;
@@ -64,13 +66,18 @@
 		h1 {
 			font: 30px/1.8 SegoeUI, sans-serif;
 			text-transform: uppercase;
-			margin-bottom: 1rem;
+			margin: 0;
 			text-align: center;
 			font-weight: 300px;
 
 			@include media ('>=tablet') {
+				font: 35px/1.8 SegoeUI, sans-serif;
+			}
+
+			@include media ('>=desktop') {
 				font: 42px/2 SegoeUI, sans-serif;
 		}
+			
 	}
 
 		h1 span {
@@ -79,10 +86,11 @@
 			color: white; 
 			padding: 5px;
 
-			@include media ('>=tablet') {
+			@include media ('>=desktop') {
 				padding: 10px;
-	}
+			}
 		}
+	}
 }
 
 .services {
@@ -122,6 +130,121 @@
 
 .portfolio {
 
+.block {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 80px;
+}
+
+.burger i {
+		display: none;
+	}
+
+.list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 3;
+
+	.active a {
+		color: $light-blue;
+		border: 2px solid $light-blue;		
+	}
+
+	a {
+		opacity: 0.9;
+		cursor: pointer;
+		text-transform: uppercase;
+		color: rgba(81, 95, 103, 0.9);
+		text-decoration: none;
+		font-weight: bold;
+		transition: color .3s linear, border-color .3s linear;
+		border: 2px solid transparent;
+		padding: 11px 20px;
+
+		&:hover {
+			color: $light-blue;
+			border-color: $light-blue;
+			text-decoration: none;  
+		}
+	}
+
+	li {
+		list-style: none;
+		margin: 0 0 0 20px;
+
+		@include media ('>=tablet') {
+			margin: 0 0 0 10px;
+		}
+
+		@include media ('>=desktop') {
+			margin: 0 0 0 20px;
+		}
+	}
+}
+
+@include media ('<tablet') {
+
+	.block {
+		padding: 0 0 10px;
+	}
+
+	.burger {
+		width: 50px;
+		height: 50px;
+		border: none;
+		background-color: rgb(75,202,255, 0.8);
+		color: $white;
+		font-size: 24px;
+		border-radius: 3px;
+		position: relative;
+		cursor: pointer;
+		display: block;
+
+		&:hover {
+			color: #c1edff;
+			background-color: #00a4e8;
+		}
+
+		i {
+			position: absolute;
+			right: 14px;
+			top: 14px;	
+			display: block;
+		}
+	}
+
+	.menu {
+		position: absolute;
+		left: -20px;
+		height: 100vh;
+		background-color: #e8f8ff;
+		padding: 30px 10px 10px 10px;
+		transition: all .3s linear;
+		overflow: auto;
+		top: 100%;
+		right: -20px;
+		opacity: 1;
+		visibility: hidden;
+		z-index: 5;
+	}
+
+	.menu.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.list {
+		display: block;
+
+		li {
+		margin: 0 0 30px 0;  
+		}
+	}
+}
 	.title {
 		margin-bottom: 0;
 
@@ -150,7 +273,8 @@
 			width: 25%;
 			padding: 15px;
 		}
-
+	
+	}
 	.card {
 		position: relative;
 
@@ -161,6 +285,7 @@
 			opacity: 0.8;
 			filter: grayscale(100%);
 		}
+	}
 
 	.hover-box {
 		background-color: rgba(0,0,0,.5);
@@ -179,7 +304,7 @@
 			}
 		}
 
-		.plus {
+	.plus {
 		&:before,
 		&:after {
 			content: '';
@@ -198,9 +323,7 @@
 					width: 3px;
 					height: 30px;
 				}
-			}
-		}
-	}	
+			}	
 }	
 
 
@@ -269,10 +392,11 @@
 		font-size: 30px;
 		font-family: FontAwesome;
 		line-height: 0.8;
+		cursor: pointer;
 
 			&:hover {
 				text-decoration: none;
-				color: #e8f8ff;
+				color: #d4f2ff;
 			}
 		}
 }
@@ -285,11 +409,6 @@
 
 .information {
 	padding: 100px 0 173px 0;
-	position: relative;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	object-fit: contain;
 
 	p {
 		padding-bottom: 15px;
@@ -379,13 +498,7 @@
 		font-weight: bold;
 	}
 
-
 .contact {
-	position: relative;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	object-fit: contain;
 
 	address, p {
 			font-weight: 600;

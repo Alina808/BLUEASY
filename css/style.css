@@ -672,7 +672,7 @@ a:hover {
   text-decoration: none;
   color: #353f46;
   border: 2px solid #353f46;
-  padding: 15px 40px;
+  padding: 10px 40px;
   text-transform: uppercase;
   transition: color 0.1s linear, border-color 0.2s linear;
   display: inline-block;
@@ -708,7 +708,7 @@ a:hover {
   }
 }
 .btn:hover {
-  background-color: #24beff;
+  background-color: #00b1fc;
 }
 .btn.btn-primary {
   background-color: #007bff;
@@ -749,119 +749,6 @@ a:hover {
   width: 100%;
 }
 
-.portfolio {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.block {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 80px;
-}
-
-.burger i {
-  display: none;
-}
-
-.list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 3;
-}
-.list .active a {
-  color: #4bcaff;
-  border: 2px solid #4bcaff;
-}
-.list a {
-  opacity: 0.9;
-  cursor: pointer;
-  text-transform: uppercase;
-  color: rgba(81, 95, 103, 0.9);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s linear, border-color 0.3s linear;
-  border: 2px solid transparent;
-  padding: 11px 20px;
-}
-.list a:hover {
-  color: #4bcaff;
-  border-color: #4bcaff;
-  text-decoration: none;
-}
-.list li {
-  list-style: none;
-  margin: 0 0 0 20px;
-}
-@media (min-width: 768px) {
-  .list li {
-    margin: 0 0 0 10px;
-  }
-}
-@media (min-width: 1024px) {
-  .list li {
-    margin: 0 0 0 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  .block {
-    padding: 0 0 10px;
-  }
-
-  .burger {
-    width: 50px;
-    height: 50px;
-    border: none;
-    background-color: rgba(75, 202, 255, 0.8);
-    color: #fff;
-    font-size: 24px;
-    border-radius: 3px;
-    position: relative;
-    cursor: pointer;
-  }
-  .burger i {
-    position: absolute;
-    right: 14px;
-    top: 14px;
-    display: block;
-  }
-
-  .menu {
-    position: absolute;
-    left: -20px;
-    height: 100vh;
-    background-color: #e8f8ff;
-    padding: 30px 10px 10px 10px;
-    transition: all 0.3s linear;
-    overflow: auto;
-    top: 100%;
-    right: -20px;
-    opacity: 1;
-    visibility: hidden;
-    z-index: 5;
-  }
-
-  .menu.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .list {
-    display: block;
-  }
-  .list li {
-    margin: 0 0 30px 0;
-  }
-}
 .title {
   position: relative;
   margin-bottom: 39px;
@@ -888,8 +775,16 @@ a:hover {
   color: #515f67;
 }
 
-.bg {
+.bg-color {
   background-color: #4bcaff;
+}
+
+.bg {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  object-fit: contain;
 }
 
 .padding {
@@ -907,45 +802,42 @@ a:hover {
   padding: 0 20px;
 }
 
-.intro {
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  object-fit: contain;
-}
-
-.text-block {
+.intro .text-block {
   padding-top: 200px;
   padding-bottom: 130px;
 }
 @media (min-width: 1024px) {
-  .text-block {
+  .intro .text-block {
     padding-top: 400px;
     padding-bottom: 260px;
   }
 }
-.text-block h1 {
+.intro .text-block h1 {
   font: 30px/1.8 SegoeUI, sans-serif;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin: 0;
   text-align: center;
   font-weight: 300px;
 }
 @media (min-width: 768px) {
-  .text-block h1 {
+  .intro .text-block h1 {
+    font: 35px/1.8 SegoeUI, sans-serif;
+  }
+}
+@media (min-width: 1024px) {
+  .intro .text-block h1 {
     font: 42px/2 SegoeUI, sans-serif;
   }
 }
-.text-block h1 span {
+.intro .text-block h1 span {
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 5px;
 }
-@media (min-width: 768px) {
-  .text-block h1 span {
+@media (min-width: 1024px) {
+  .intro .text-block h1 span {
     padding: 10px;
   }
 }
@@ -981,6 +873,108 @@ a:hover {
   line-height: 1.5;
 }
 
+.portfolio .block {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.portfolio .burger i {
+  display: none;
+}
+.portfolio .list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 3;
+}
+.portfolio .list .active a {
+  color: #4bcaff;
+  border: 2px solid #4bcaff;
+}
+.portfolio .list a {
+  opacity: 0.9;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: rgba(81, 95, 103, 0.9);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s linear, border-color 0.3s linear;
+  border: 2px solid transparent;
+  padding: 11px 20px;
+}
+.portfolio .list a:hover {
+  color: #4bcaff;
+  border-color: #4bcaff;
+  text-decoration: none;
+}
+.portfolio .list li {
+  list-style: none;
+  margin: 0 0 0 20px;
+}
+@media (min-width: 768px) {
+  .portfolio .list li {
+    margin: 0 0 0 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .portfolio .list li {
+    margin: 0 0 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  .portfolio .block {
+    padding: 0 0 10px;
+  }
+  .portfolio .burger {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: rgba(75, 202, 255, 0.8);
+    color: #fff;
+    font-size: 24px;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+  }
+  .portfolio .burger:hover {
+    color: #c1edff;
+    background-color: #00a4e8;
+  }
+  .portfolio .burger i {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    display: block;
+  }
+  .portfolio .menu {
+    position: absolute;
+    left: -20px;
+    height: 100vh;
+    background-color: #e8f8ff;
+    padding: 30px 10px 10px 10px;
+    transition: all 0.3s linear;
+    overflow: auto;
+    top: 100%;
+    right: -20px;
+    opacity: 1;
+    visibility: hidden;
+    z-index: 5;
+  }
+  .portfolio .menu.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .portfolio .list {
+    display: block;
+  }
+  .portfolio .list li {
+    margin: 0 0 30px 0;
+  }
+}
 .portfolio .title {
   margin-bottom: 0;
 }
@@ -1011,17 +1005,17 @@ a:hover {
     padding: 15px;
   }
 }
-.portfolio .col .card {
+.portfolio .card {
   position: relative;
 }
-.portfolio .col .card img {
+.portfolio .card img {
   display: block;
   width: 100%;
   object-fit: contain;
   opacity: 0.8;
   filter: grayscale(100%);
 }
-.portfolio .col .card .hover-box {
+.portfolio .hover-box {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
@@ -1033,10 +1027,10 @@ a:hover {
   opacity: 0;
   transition: opasity 0.3s linear;
 }
-.portfolio .col .card .hover-box:hover {
+.portfolio .hover-box:hover {
   opacity: 1;
 }
-.portfolio .col .card .plus:before, .portfolio .col .card .plus:after {
+.portfolio .plus:before, .portfolio .plus:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1044,11 +1038,11 @@ a:hover {
   background-color: #fff;
   transform: translate(-50%, -50%);
 }
-.portfolio .col .card .plus:before {
+.portfolio .plus:before {
   width: 30px;
   height: 3px;
 }
-.portfolio .col .card .plus:after {
+.portfolio .plus:after {
   width: 3px;
   height: 30px;
 }
@@ -1107,10 +1101,11 @@ a:hover {
   font-size: 30px;
   font-family: FontAwesome;
   line-height: 0.8;
+  cursor: pointer;
 }
 .twitter .twit:hover {
   text-decoration: none;
-  color: #e8f8ff;
+  color: #d4f2ff;
 }
 
 .icon {
@@ -1121,11 +1116,6 @@ a:hover {
 
 .information {
   padding: 100px 0 173px 0;
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  object-fit: contain;
 }
 .information p {
   padding-bottom: 15px;
@@ -1204,13 +1194,6 @@ a:hover {
   font-weight: bold;
 }
 
-.contact {
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  object-fit: contain;
-}
 .contact address, .contact p {
   font-weight: 600;
   font-style: normal;
@@ -1453,6 +1436,9 @@ textarea {
   color: #515f67;
   padding: 38px 0;
 }
+.footer p {
+  margin: 0;
+}
 @media (min-width: 768px) {
   .footer {
     padding: 78px 0;
@@ -1475,10 +1461,15 @@ textarea {
 
 .footer-list {
   display: flex;
-  padding: 0 0 10px 0;
+  padding: 0 0 15px 0;
   margin: 0;
   text-transform: uppercase;
   list-style: none;
+}
+@media (min-width: 768px) {
+  .footer-list {
+    padding: 0;
+  }
 }
 .footer-list li:after {
   content: "|";

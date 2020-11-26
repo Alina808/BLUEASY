@@ -24,7 +24,7 @@
 	transition: color .15s ease-in-out, border-color .15s ease-in-out, background-color .15s ease-in-out;
 	display: inline-block;
 	vertical-align: middle;
-	padding: 25px 150px;
+	padding: 25px 100px;
 	border-radius: 3px;
 	text-align: center;
 	border: none;
@@ -34,6 +34,10 @@
 	margin-bottom: 30px;
 	min-width: 300px;
 	font-weight: bold;
+
+	@include media ('>=tablet') {
+		padding: 25px 150px;
+	}
 
 	&:hover {
 		background-color: #24beff;

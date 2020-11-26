@@ -691,7 +691,7 @@ a:hover {
   transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   display: inline-block;
   vertical-align: middle;
-  padding: 25px 150px;
+  padding: 25px 100px;
   border-radius: 3px;
   text-align: center;
   border: none;
@@ -701,6 +701,11 @@ a:hover {
   margin-bottom: 30px;
   min-width: 300px;
   font-weight: bold;
+}
+@media (min-width: 768px) {
+  .btn {
+    padding: 25px 150px;
+  }
 }
 .btn:hover {
   background-color: #24beff;
@@ -832,14 +837,14 @@ a:hover {
 
   .menu {
     position: absolute;
-    left: -15px;
+    left: -20px;
     height: 100vh;
     background-color: #e8f8ff;
     padding: 30px 10px 10px 10px;
     transition: all 0.3s linear;
     overflow: auto;
     top: 100%;
-    right: -15px;
+    right: -20px;
     opacity: 1;
     visibility: hidden;
     z-index: 5;
@@ -1412,15 +1417,14 @@ textarea {
 
   .header-menu {
     position: absolute;
-    left: 0;
+    left: -20px;
     height: 100vh;
-    width: 100vw;
     background: #005172;
     padding: 30px 10px 10px 10px;
     transition: all 0.3s linear;
     overflow: auto;
     top: 100%;
-    right: 0;
+    right: -20px;
     opacity: 0;
     visibility: hidden;
   }

@@ -30,6 +30,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 30px 0;
 
 	@include media ('>=tablet') {
 		padding: 45px 0;
@@ -41,11 +42,15 @@
 }
 
 .header-list {
-	display: flex;
+	display: block;
 	margin: 0;
 	padding: 0;
 	position: relative;
 	z-index: 3;
+
+	@include media ('>=tablet') {
+		display: flex;
+	}
 
 	.active a {
 		color: $light-blue;
@@ -72,7 +77,7 @@
 
 	li {
 		list-style: none;
-		margin: 0 0 0 20px;
+		margin: 0 0 30px 0;
 
 		@include media ('>=tablet') {
 			margin: 0 0 0 10px;
@@ -86,10 +91,6 @@
 
 
 @include media ('<tablet') {
-
-	.header-body {
-		padding: 30px 0;
-	}
 
     .header-burger {
 		display: block;
@@ -135,7 +136,7 @@
 		width: 100%;
 		height: 4px;
 		top: 8px;
-		transition: all .2s linear;
+		transition: background-color .3s linear, transform .3s linear;
 		border-radius: 2px;
 	}
 
@@ -158,9 +159,8 @@
 		left: -20px;
 		height: 100vh;
 		background: #005172;
-		padding: 30px 10px 10px 10px;
-		transition: all .3s linear;
-		// transition: opacity .3s linear, visibility .3s linear, transform .3s linear;
+		padding: 30px 10px 10px 15px;
+		transition: opacity .3s linear, visibility .3s linear;
 		overflow: auto;
 		top: 100%;
 		right: -20px;
@@ -172,12 +172,5 @@
 		opacity: 1;
 		visibility: visible;
 	}
-
-	.header-list {
-		display: block;
-
-		li {
-		margin: 0 0 30px 0;  
-		}
-	}
 }
+

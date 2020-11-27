@@ -873,28 +873,65 @@ a:hover {
   line-height: 1.5;
 }
 
-.portfolio .block {
+.block {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 80px;
+  padding: 0 0 10px;
 }
-.portfolio .burger i {
-  display: none;
+@media (min-width: 768px) {
+  .block {
+    padding: 0;
+  }
 }
-.portfolio .list {
-  display: flex;
+
+.burger {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: rgba(75, 202, 255, 0.8);
+  color: #fff;
+  font-size: 24px;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+}
+.burger:hover {
+  color: #c1edff;
+  background-color: #00a4e8;
+}
+.burger i {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  display: block;
+}
+
+.list {
   margin: 0;
   padding: 0;
   position: relative;
   z-index: 3;
+  display: block;
 }
-.portfolio .list .active a {
+@media (min-width: 768px) {
+  .list {
+    display: flex;
+  }
+}
+.list .active a {
   color: #4bcaff;
   border: 2px solid #4bcaff;
 }
-.portfolio .list a {
+.list a {
   opacity: 0.9;
   cursor: pointer;
   text-transform: uppercase;
@@ -905,74 +942,51 @@ a:hover {
   border: 2px solid transparent;
   padding: 11px 20px;
 }
-.portfolio .list a:hover {
+.list a:hover {
   color: #4bcaff;
   border-color: #4bcaff;
   text-decoration: none;
 }
-.portfolio .list li {
+.list li {
   list-style: none;
-  margin: 0 0 0 20px;
+  margin: 0 0 30px 0;
 }
 @media (min-width: 768px) {
-  .portfolio .list li {
+  .list li {
     margin: 0 0 0 10px;
   }
 }
 @media (min-width: 1024px) {
-  .portfolio .list li {
+  .list li {
     margin: 0 0 0 20px;
   }
 }
+
 @media (max-width: 767px) {
-  .portfolio .block {
-    padding: 0 0 10px;
-  }
-  .portfolio .burger {
-    width: 50px;
-    height: 50px;
-    border: none;
-    background-color: rgba(75, 202, 255, 0.8);
-    color: #fff;
-    font-size: 24px;
-    border-radius: 3px;
-    position: relative;
-    cursor: pointer;
-    display: block;
-  }
-  .portfolio .burger:hover {
-    color: #c1edff;
-    background-color: #00a4e8;
-  }
-  .portfolio .burger i {
-    position: absolute;
-    right: 14px;
-    top: 14px;
-    display: block;
-  }
-  .portfolio .menu {
+  .menu {
     position: absolute;
     left: -20px;
     height: 100vh;
     background-color: #e8f8ff;
-    padding: 30px 10px 10px 10px;
-    transition: all 0.3s linear;
+    padding: 30px 10px 10px 15px;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
     overflow: auto;
     top: 100%;
     right: -20px;
-    opacity: 1;
+    opacity: 0;
     visibility: hidden;
     z-index: 5;
   }
-  .portfolio .menu.active {
+}
+@media (max-width: 767px) and (min-width: 768px) {
+  .menu {
+    opacity: 1;
+  }
+}
+@media (max-width: 767px) {
+  .menu.active {
     opacity: 1;
     visibility: visible;
-  }
-  .portfolio .list {
-    display: block;
-  }
-  .portfolio .list li {
-    margin: 0 0 30px 0;
   }
 }
 .portfolio .title {
@@ -1284,6 +1298,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 30px 0;
 }
 @media (min-width: 768px) {
   .header-body {
@@ -1297,11 +1312,16 @@ textarea {
 }
 
 .header-list {
-  display: flex;
+  display: block;
   margin: 0;
   padding: 0;
   position: relative;
   z-index: 3;
+}
+@media (min-width: 768px) {
+  .header-list {
+    display: flex;
+  }
 }
 .header-list .active a {
   color: #4bcaff;
@@ -1325,7 +1345,7 @@ textarea {
 }
 .header-list li {
   list-style: none;
-  margin: 0 0 0 20px;
+  margin: 0 0 30px 0;
 }
 @media (min-width: 768px) {
   .header-list li {
@@ -1339,10 +1359,6 @@ textarea {
 }
 
 @media (max-width: 767px) {
-  .header-body {
-    padding: 30px 0;
-  }
-
   .header-burger {
     display: block;
     position: relative;
@@ -1387,7 +1403,7 @@ textarea {
     width: 100%;
     height: 4px;
     top: 8px;
-    transition: all 0.2s linear;
+    transition: background-color 0.3s linear, transform 0.3s linear;
     border-radius: 2px;
   }
 
@@ -1410,8 +1426,8 @@ textarea {
     left: -20px;
     height: 100vh;
     background: #005172;
-    padding: 30px 10px 10px 10px;
-    transition: all 0.3s linear;
+    padding: 30px 10px 10px 15px;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
     overflow: auto;
     top: 100%;
     right: -20px;
@@ -1422,13 +1438,6 @@ textarea {
   .header-menu.active {
     opacity: 1;
     visibility: visible;
-  }
-
-  .header-list {
-    display: block;
-  }
-  .header-list li {
-    margin: 0 0 30px 0;
   }
 }
 .footer {
